@@ -1,0 +1,147 @@
+/* 
+    Created on : 10-Feb-2018, 20:35:53
+    Author     : Conor Donnelly
+*/
+
+#openFile{
+    -fx-background-image: url("../Images/OpenFile.png");
+    -fx-background-size: 25 25 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-postion: centre; 
+    -fx-background-color: transparent;
+}
+
+#playButton{
+    -fx-background-image: url("../Images/Play.png");
+    -fx-background-size: 25 25 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-postion: centre; 
+    -fx-background-color: transparent;
+}
+
+#pauseButton{
+    -fx-background-image: url("../Images/Pause.png");
+    -fx-background-size: 25 25 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-postion: centre; 
+    -fx-background-color: transparent;
+}
+#exitButton{
+    -fx-background-image: url("../Images/Exit.png");
+    -fx-background-size: 25 25 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-postion: centre; 
+    -fx-background-color: transparent;
+}
+
+#fastButton{
+    -fx-background-image: url("../Images/Fast.png");
+    -fx-background-size: 25 25 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-postion: centre; 
+    -fx-background-color: transparent;
+}
+
+#fasterButton{
+    -fx-background-image: url("../Images/Faster.png");
+    -fx-background-size: 25 25 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-postion: centre; 
+    -fx-background-color: transparent;
+}
+
+#slowButton{
+    -fx-background-image: url("../Images/Slow.png");
+    -fx-background-size: 25 25 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-postion: centre; 
+    -fx-background-color: transparent;
+}
+
+#slowerButton{
+    -fx-background-image: url("../Images/Slower.png");
+    -fx-background-size: 25 25 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-postion: centre; 
+    -fx-background-color: transparent;
+}
+
+#stopButton{
+    -fx-background-image: url("../Images/Stop.png");
+    -fx-background-size: 25 25 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-postion: centre; 
+    -fx-background-color: transparent;
+}
+
+#openFile1{
+    -fx-background-image: url("../Images/OpenFile.png");
+    -fx-background-size: 25 25 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-postion: centre; 
+    -fx-background-color: transparent;
+}
+
+#playButton1{
+    -fx-background-image: url("../Images/Play.png");
+    -fx-background-size: 25 25 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-postion: centre; 
+    -fx-background-color: transparent;
+}
+
+#pauseButton1{
+    -fx-background-image: url("../Images/Pause.png");
+    -fx-background-size: 25 25 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-postion: centre; 
+    -fx-background-color: transparent;
+}
+#exitButton1{
+    -fx-background-image: url("../Images/Exit.png");
+    -fx-background-size: 25 25 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-postion: centre; 
+    -fx-background-color: transparent;
+}
+
+#fastButton1{
+    -fx-background-image: url("../Images/Fast.png");
+    -fx-background-size: 25 25 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-postion: centre; 
+    -fx-background-color: transparent;
+}
+
+#fasterButton1{
+    -fx-background-image: url("../Images/Faster.png");
+    -fx-background-size: 25 25 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-postion: centre; 
+    -fx-background-color: transparent;
+}
+
+#slowButton1{
+    -fx-background-image: url("../Images/Slow.png");
+    -fx-background-size: 25 25 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-postion: centre; 
+    -fx-background-color: transparent;
+}
+
+#slowerButton1{
+    -fx-background-image: url("../Images/Slower.png");
+    -fx-background-size: 25 25 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-postion: centre; 
+    -fx-background-color: transparent;
+}
+
+#stopButton1{
+    -fx-background-image: url("../Images/Stop.png");
+    -fx-background-size: 25 25 ;
+    -fx-background-repeat: no-repeat;
+    -fx-background-postion: centre; 
+    -fx-background-color: transparent;
+}
+

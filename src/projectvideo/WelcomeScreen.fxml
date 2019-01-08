@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectvideo.WelcomeScreenController">
+   <children>
+      <AnchorPane layoutX="689.0" prefHeight="900.0" prefWidth="710.0" style="-fx-background-color: #366847;">
+         <children>
+            <Label layoutX="56.0" layoutY="29.0" text="Welcome.." textFill="#f0eeee">
+               <font>
+                  <Font name="Calibri Light Italic" size="36.0" />
+               </font>
+            </Label>
+            <Button layoutX="58.0" layoutY="659.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" prefHeight="51.0" prefWidth="186.0" text="Continue">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="58.0" layoutY="83.0" text="To use this application please read the following guidlines..." textFill="#f0eeee">
+               <font>
+                  <Font name="Calibri Light Italic" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="57.0" layoutY="151.0" text="Step 1 - Select a video file (.mp4 format)" textFill="#f0eeee">
+               <font>
+                  <Font name="Calibri Light Italic" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="57.0" layoutY="211.0" prefHeight="51.0" prefWidth="527.0" text="Step 2 - Play the video and annotate the events using the " textFill="#f0eeee">
+               <font>
+                  <Font name="Calibri Light Italic" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="131.0" layoutY="244.0" prefHeight="51.0" prefWidth="454.0" text="comboboxes provided" textFill="#f0eeee">
+               <font>
+                  <Font name="Calibri Light Italic" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="57.0" layoutY="310.0" prefHeight="51.0" prefWidth="527.0" text="Step 3 - View the table of events  in the analysis tab" textFill="#f0eeee">
+               <font>
+                  <Font name="Calibri Light Italic" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="59.0" layoutY="386.0" prefHeight="51.0" prefWidth="574.0" text="Step 4 - Select the specific event and view the it by pressing" textFill="#f0eeee">
+               <font>
+                  <Font name="Calibri Light Italic" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="134.0" layoutY="421.0" prefHeight="51.0" prefWidth="454.0" text="the &quot;View Selected Event&quot; button" textFill="#f0eeee">
+               <font>
+                  <Font name="Calibri Light Italic" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="57.0" layoutY="507.0" prefHeight="51.0" prefWidth="615.0" text="Step 5 - Or if the event is a shot or goal calculate the  EGV of the" textFill="#f0eeee">
+               <font>
+                  <Font name="Calibri Light Italic" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="132.0" layoutY="549.0" prefHeight="51.0" prefWidth="454.0" text="selected event by pressing the EGV button" textFill="#f0eeee">
+               <font>
+                  <Font name="Calibri Light Italic" size="23.0" />
+               </font>
+            </Label>
+            <Separator layoutX="-1.0" layoutY="121.0" prefHeight="4.0" prefWidth="710.0" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="900.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/Soccer.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

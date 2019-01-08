@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectvideo.MainController">
+    <children>
+        <TabPane fx:id="tabPane" prefHeight="900.0" prefWidth="1400.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab fx:id="videoPlayerTab" text="Sports Video Player">
+                    <content>
+                        <BorderPane>
+                            <bottom>
+                                <VBox alignment="CENTER" prefHeight="103.0" prefWidth="1510.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <HBox alignment="CENTER" prefHeight="85.0" prefWidth="1500.0">
+                                            <children>
+                                                <AnchorPane prefHeight="136.0" prefWidth="1500.0">
+                                                    <children>
+                                                        <Button fx:id="openFile" alignment="CENTER" layoutX="55.0" layoutY="29.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="30.0" stylesheets="@Style.css">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <padding>
+                                                                <Insets bottom="2.0" right="2.0" top="2.0" />
+                                                            </padding>
+                                                        </Button>
+                                                        <Button fx:id="playButton" alignment="CENTER" layoutX="95.0" layoutY="29.0" mnemonicParsing="false" onAction="#playVideo" prefHeight="30.0" prefWidth="30.0" stylesheets="@Style.css">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <padding>
+                                                                <Insets bottom="2.0" right="2.0" top="2.0" />
+                                                            </padding>
+                                                        </Button>
+                                                        <Button fx:id="pauseButton" alignment="CENTER" layoutX="136.0" layoutY="29.0" mnemonicParsing="false" onAction="#pauseVideo" prefHeight="30.0" prefWidth="30.0" stylesheets="@Style.css">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <padding>
+                                                                <Insets bottom="2.0" right="2.0" top="2.0" />
+                                                            </padding>
+                                                        </Button>
+                                                        <Button fx:id="stopButton" alignment="CENTER" layoutX="350.0" layoutY="27.0" mnemonicParsing="false" onAction="#stopVideo" prefHeight="30.0" prefWidth="30.0" stylesheets="@Style.css">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <padding>
+                                                                <Insets bottom="2.0" right="2.0" top="2.0" />
+                                                            </padding>
+                                                        </Button>
+                                                        <Button fx:id="slowerButton" alignment="CENTER" layoutX="222.0" layoutY="27.0" mnemonicParsing="false" onAction="#slowerVideo" prefHeight="30.0" prefWidth="30.0" stylesheets="@Style.css">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <padding>
+                                                                <Insets bottom="2.0" right="2.0" top="2.0" />
+                                                            </padding>
+                                                        </Button>
+                                                        <Button fx:id="slowButton" alignment="CENTER" layoutX="180.0" layoutY="27.0" mnemonicParsing="false" onAction="#slowVideo" prefHeight="30.0" prefWidth="30.0" stylesheets="@Style.css">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <padding>
+                                                                <Insets bottom="2.0" right="2.0" top="2.0" />
+                                                            </padding>
+                                                        </Button>
+                                                        <Button fx:id="fastButton" alignment="CENTER" layoutX="308.0" layoutY="27.0" mnemonicParsing="false" onAction="#fastVideo" prefHeight="30.0" prefWidth="30.0" stylesheets="@Style.css">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <padding>
+                                                                <Insets bottom="2.0" right="2.0" top="2.0" />
+                                                            </padding>
+                                                        </Button>
+                                                        <Button fx:id="fasterButton" alignment="CENTER" layoutX="270.0" layoutY="27.0" mnemonicParsing="false" onAction="#fasterVideo" prefHeight="30.0" prefWidth="30.0" stylesheets="@Style.css">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <padding>
+                                                                <Insets bottom="2.0" right="2.0" top="2.0" />
+                                                            </padding>
+                                                        </Button>
+                                                        <Button fx:id="exitButton" alignment="CENTER" layoutX="394.0" layoutY="27.0" mnemonicParsing="false" onAction="#exitVideo" prefHeight="30.0" prefWidth="30.0" stylesheets="@Style.css">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <padding>
+                                                                <Insets bottom="2.0" right="2.0" top="2.0" />
+                                                            </padding>
+                                                        </Button>
+                                                        <Slider fx:id="slider" layoutX="462.0" layoutY="16.0">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <padding>
+                                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                            </padding>
+                                                        </Slider>
+                                                        <ComboBox fx:id="playerCombobox" layoutX="888.0" layoutY="15.0" prefWidth="200.0" promptText="Select Player">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <padding>
+                                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                            </padding>
+                                                        </ComboBox>
+                                                        <ComboBox fx:id="eventCombobox" layoutX="654.0" layoutY="14.0" onAction="#pauseVideo" prefHeight="30.0" prefWidth="200.0" promptText="Select Event">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <padding>
+                                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                            </padding>
+                                                        </ComboBox>
+                                                        <Button layoutX="1146.0" layoutY="27.0" mnemonicParsing="false" onAction="#confirmButtonAction" prefHeight="27.0" prefWidth="149.0" stylesheets="@Style.css" text="Confirm Selection" textAlignment="CENTER">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <padding>
+                                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                            </padding>
+                                                        </Button>
+                                                        <Separator layoutX="613.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="70.4" prefWidth="10.4" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="613.0" AnchorPane.topAnchor="-1.0">
+                                                            <opaqueInsets>
+                                                                <Insets />
+                                                            </opaqueInsets>
+                                                            <padding>
+                                                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                            </padding>
+                                                        </Separator>
+                                                        <Label layoutX="504.0" layoutY="41.0" text="Volume" />
+                                                        <Label fx:id="label" layoutX="656.0" layoutY="56.0" prefHeight="18.0" prefWidth="62.0" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </bottom>
+                            <center>
+                                <StackPane fx:id="playTime" prefHeight="600.0" prefWidth="1500.0" style="-fx-background-color: #5B5B5B;" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" />
+                                        <Slider fx:id="seekSlider" prefHeight="14.0" prefWidth="1500.0" StackPane.alignment="BOTTOM_CENTER">
+                                            <StackPane.margin>
+                                                <Insets bottom="2.0" left="2.0" right="2.0" />
+                                            </StackPane.margin>
+                                        </Slider>
+                                    </children>
+                                </StackPane>
+                            </center>
+                        </BorderPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="videoAnalysisTab" text="Video Analysis">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <AnchorPane id="AnchorPane" prefHeight="910.0" prefWidth="1500.0">
+                                    <children>
+                                        <TableView fx:id="tableView" layoutX="53.0" layoutY="117.0" prefHeight="650.0" prefWidth="1100.0">
+                                            <columns>
+                                                <TableColumn fx:id="columnName" prefWidth="261.60004806518555" text="Player's Name" />
+                                                <TableColumn fx:id="columnEvent" prefWidth="302.39996337890625" text="Event" />
+                                                <TableColumn fx:id="columnTime" minWidth="0.0" prefWidth="257.5999755859375" text="Time" />
+                                            </columns>
+                                        </TableView>
+                                        <ComboBox fx:id="playerTableCombobox" layoutX="78.0" layoutY="70.0" prefHeight="30.0" prefWidth="220.0" promptText="Select Player.." />
+                                        <ComboBox fx:id="eventTableCombobox" layoutX="356.0" layoutY="70.0" prefHeight="30.0" prefWidth="220.0" promptText="Select Event.." />
+                                        <Button layoutX="639.0" layoutY="70.0" mnemonicParsing="false" onAction="#viewSelectedEventButton" prefHeight="30.0" prefWidth="220.0" text="View Selected Event" />
+                                        <Button layoutX="1206.0" layoutY="725.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Exit">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Button>
+                                        <Button layoutX="898.0" layoutY="70.0" mnemonicParsing="false" onAction="#viewEGVButton" prefHeight="30.0" prefWidth="220.0" text="Create EGV for Selected Event" />
+                                        <Button fx:id="reset" layoutX="1204.0" layoutY="662.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Reset Video Player">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="egvTab" text="Expected Goal Value">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <LineChart fx:id="EPVChart" layoutX="728.0" layoutY="124.0" prefHeight="409.0" prefWidth="586.0" title="EGV Chart">
+                                    <xAxis>
+                                        <CategoryAxis label="Event" side="BOTTOM" />
+                                    </xAxis>
+                                    <yAxis>
+                                        <NumberAxis label="EGV Value" side="LEFT" />
+                                    </yAxis>
+                                </LineChart>
+                                <Label layoutX="759.0" layoutY="577.0" text="Distance from Goal">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="1132.0" layoutY="568.0" />
+                                <Label layoutX="990.0" layoutY="577.0" text="Angle of Shot">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="1182.0" layoutY="577.0" text="Players Rating">
+                                    <font>
+                                        <Font size="18.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="distance" layoutX="755.0" layoutY="610.0" prefHeight="30.0" prefWidth="160.0" promptText="0-20 metres" />
+                                <TextField fx:id="rating" layoutX="1161.0" layoutY="613.0" prefHeight="30.0" prefWidth="160.0" promptText="0-100" />
+                                <TextField fx:id="angle" layoutX="966.0" layoutY="613.0" prefHeight="30.0" prefWidth="160.0" promptText="0-90 degrees" />
+                                <Button layoutX="806.0" layoutY="682.0" mnemonicParsing="false" onAction="#egvButton" text="Generates Players EGV">
+                                    <font>
+                                        <Font size="14.0" />
+                                    </font>
+                                </Button>
+                                <HBox layoutX="65.0" layoutY="527.0" prefHeight="81.0" prefWidth="627.0">
+                                    <children>
+                                        <AnchorPane prefHeight="74.0" prefWidth="628.0">
+                                            <children>
+                                                <Button fx:id="openFile1" alignment="CENTER" layoutX="28.0" layoutY="27.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" stylesheets="@Style.css">
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                    <padding>
+                                                        <Insets bottom="2.0" right="2.0" top="2.0" />
+                                                    </padding>
+                                                </Button>
+                                                <Button fx:id="playButton1" alignment="CENTER" layoutX="72.0" layoutY="27.0" mnemonicParsing="false" onAction="#playVideo" prefHeight="30.0" prefWidth="30.0" stylesheets="@Style.css">
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                    <padding>
+                                                        <Insets bottom="2.0" right="2.0" top="2.0" />
+                                                    </padding>
+                                                </Button>
+                                                <Button fx:id="pauseButton1" alignment="CENTER" layoutX="115.0" layoutY="27.0" mnemonicParsing="false" onAction="#pauseVideo" onDragDetected="#pauseVideo" prefHeight="30.0" prefWidth="30.0" stylesheets="@Style.css">
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                    <padding>
+                                                        <Insets bottom="2.0" right="2.0" top="2.0" />
+                                                    </padding>
+                                                </Button>
+                                                <Button fx:id="stopButton1" alignment="CENTER" layoutX="159.0" layoutY="27.0" mnemonicParsing="false" onAction="#stopVideo" prefHeight="30.0" prefWidth="30.0" stylesheets="@Style.css">
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                    <padding>
+                                                        <Insets bottom="2.0" right="2.0" top="2.0" />
+                                                    </padding>
+                                                </Button>
+                                                <Button fx:id="slowerButton1" alignment="CENTER" layoutX="204.0" layoutY="27.0" mnemonicParsing="false" onAction="#slowerVideo" prefHeight="30.0" prefWidth="30.0" stylesheets="@Style.css">
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                    <padding>
+                                                        <Insets bottom="2.0" right="2.0" top="2.0" />
+                                                    </padding>
+                                                </Button>
+                                                <Button fx:id="slowButton1" alignment="CENTER" layoutX="249.0" layoutY="27.0" mnemonicParsing="false" onAction="#slowVideo" prefHeight="30.0" prefWidth="30.0" stylesheets="@Style.css">
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                    <padding>
+                                                        <Insets bottom="2.0" right="2.0" top="2.0" />
+                                                    </padding>
+                                                </Button>
+                                                <Button fx:id="fastButton1" alignment="CENTER" layoutX="294.0" layoutY="27.0" mnemonicParsing="false" onAction="#fastVideo" prefHeight="30.0" prefWidth="30.0" stylesheets="@Style.css">
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                    <padding>
+                                                        <Insets bottom="2.0" right="2.0" top="2.0" />
+                                                    </padding>
+                                                </Button>
+                                                <Button fx:id="fasterButton1" alignment="CENTER" layoutX="338.0" layoutY="27.0" mnemonicParsing="false" onAction="#fasterVideo" prefHeight="30.0" prefWidth="30.0" stylesheets="@Style.css">
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                    <padding>
+                                                        <Insets bottom="2.0" right="2.0" top="2.0" />
+                                                    </padding>
+                                                </Button>
+                                                <Button fx:id="exitButton1" alignment="CENTER" layoutX="387.0" layoutY="27.0" mnemonicParsing="false" onAction="#exitVideo" prefHeight="30.0" prefWidth="30.0" stylesheets="@Style.css">
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                    <padding>
+                                                        <Insets bottom="2.0" right="2.0" top="2.0" />
+                                                    </padding>
+                                                </Button>
+                                                <Slider fx:id="slider1" layoutX="462.0" layoutY="22.0">
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                    <padding>
+                                                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                                    </padding>
+                                                </Slider>
+                                                <Label layoutX="501.0" layoutY="43.0" text="Volume">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </HBox>
+                                <StackPane layoutX="65.0" layoutY="124.0" prefHeight="380.0" prefWidth="660.0">
+                                    <children>
+                                        <MediaView fx:id="mediaView1" fitHeight="200.0" fitWidth="200.0" />
+                                        <Slider fx:id="seekSlider1" prefHeight="14.0" prefWidth="630.0" StackPane.alignment="BOTTOM_CENTER">
+                                            <StackPane.margin>
+                                                <Insets bottom="2.0" left="20.0" right="20.0" />
+                                            </StackPane.margin>
+                                        </Slider>
+                              <ImageView fitHeight="345.0" fitWidth="660.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/Fyp%20Pic.png" />
+                                 </image>
+                              </ImageView>
+                                    </children>
+                                </StackPane>
+                        <Label fx:id="label" layoutX="1031.0" layoutY="680.0" prefHeight="34.0" prefWidth="150.0" text="EGV will appear here:">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
